@@ -20,6 +20,8 @@
   "homepage": "https://github.com/ckuh/mvp_1#readme",
   "dependencies": {
     "axios": "^0.14.0",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
     "express": "^4.14.0",
     "lodash": "^4.15.0",
     "react": "^15.3.1",
