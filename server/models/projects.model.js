@@ -1,9 +1,10 @@
-const getProjects = () => {
-  return new Promise(function (resolve, reject) {
-    resolve('hello world')
-  })
-}
+const mongoose = require('mongoose')
 
-exports.projects = {
-  get: getProjects
-}
+const ProjectsSchema = mongoose.Schema({
+  title: String,
+  about: String,
+  keywords: String,
+  url: String
+})
+
+module.exports = mongoose.model('Projects', ProjectsSchema)
