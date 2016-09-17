@@ -3,6 +3,9 @@ import { connect } from 'react-redux'
 
 import { fetchProjects } from './actions/projectActions'
 
+// components
+import ProjectTile from './Tile'
+
 class Home extends Component {
   constructor (props) {
     super(props)
@@ -27,6 +30,7 @@ class Home extends Component {
       <div>
         <h1>{this.state.userInput}</h1>
         <input onChange={this.updateUserInput} />
+        <ProjectTile />
       </div>
     )
   }
