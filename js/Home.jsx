@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+import { fetchProjects } from './actions/projectActions'
 
 class Home extends Component {
   constructor (props) {
@@ -15,6 +18,10 @@ class Home extends Component {
     this.setState({userInput: event.target.value})
   }
 
+  componentDidMount () {
+    this.props.fetchProjects('chris')
+  }
+
   render () {
     return (
       <div>
@@ -25,4 +32,23 @@ class Home extends Component {
   }
 }
 
-module.exports = Home
+const { object, func } = React.PropTypes
+
+Home.propTypes = {
+  projects: object,
+  fetchProjects: func
+}
+
+const mapStateToProps = (state) => {
+  return {
+    projects: state.projects
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchProjects: fetchProjects(dispatch)
+  }
+}
+
+module.exports = connect(mapStateToProps, mapDispatchToProps)(Home)

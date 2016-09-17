@@ -4,9 +4,9 @@ const ReactDOMServer = require('react-dom/server')
 const ReactRouter = require('react-router')
 const match = ReactRouter.match
 const RouterContext = ReactRouter.RouterContext
-// const ReactRedux = require('react-redux')
-// const Provider = ReactRedux.Provider
-// const store = require('./js/Store.jsx').store
+const ReactRedux = require('react-redux')
+const Provider = ReactRedux.Provider
+const store = require('../../js/Store.jsx').default
 const _ = require('lodash')
 const fs = require('fs')
 const baseTemplate = fs.readFileSync('./index.html')
@@ -21,8 +21,8 @@ module.exports = (req, res) => {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
     } else if (renderProps) {
       const body = ReactDOMServer.renderToString(
-        React.createElement(RouterContext, renderProps)
-        // React.createElement(Provider, {store}, React.createElement(RouterContext, renderProps))
+        // React.createElement(RouterContext, renderProps)
+        React.createElement(Provider, {store}, React.createElement(RouterContext, renderProps))
       )
       res.status(200).send(template({body}))
     } else {
