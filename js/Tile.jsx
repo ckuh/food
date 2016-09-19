@@ -11,7 +11,7 @@ class ProjectTile extends Component {
   }
 
   renderProjects () {
-    return this.props.projects.projList.map((project, key) => {
+    return this.props.projects.filterProjList.map((project, key) => {
       return (
         <div key={key}>
           <h1>{project.title}</h1>

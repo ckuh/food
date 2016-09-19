@@ -1,35 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+// actions
 import { fetchProjects } from './actions/projectActions'
 
 // components
 import ProjectTile from './Tile'
+import Search from './Search'
 
 class Home extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      userInput: 'Hello world'
-    }
-
-    this.updateUserInput = this.updateUserInput.bind(this)
-  }
-
-  updateUserInput (event) {
-    this.setState({userInput: event.target.value})
-  }
-
   componentDidMount () {
-    this.props.fetchProjects('chris')
+    this.props.fetchProjects()
   }
 
   render () {
     return (
       <div>
-        <h1>{this.state.userInput}</h1>
-        <input onChange={this.updateUserInput} />
+        <Search />
         <ProjectTile />
       </div>
     )

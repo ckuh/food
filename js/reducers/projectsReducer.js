@@ -1,5 +1,6 @@
 export default function reducer (state = {
   projList: [],
+  filterProjList: [],
   fetching: false,
   fetched: false,
   error: ''
@@ -17,7 +18,12 @@ export default function reducer (state = {
     }
     case 'FETCH_PROJECTS_FULFILLED': {
       const newState = {}
-      Object.assign(newState, state, {fetching: false, fetched: true, projList: action.payload.data})
+      Object.assign(newState, state, {fetching: false, fetched: true, projList: action.payload.data, filterProjList: action.payload.data})
+      return newState
+    }
+    case 'SET_PROJECTS': {
+      const newState = {}
+      Object.assign(newState, state, {filterProjList: action.payload})
       return newState
     }
     default: {
