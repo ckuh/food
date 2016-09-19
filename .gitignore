@@ -4,3 +4,9 @@ npm-debug.log
 bundle.js
 
 .env
+
+*.woff2
+*.svg
+*.ttf
+*.eot
+*.woff
