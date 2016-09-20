@@ -17,6 +17,16 @@ const getProjects = (req, res) => {
 const postProjects = (req, res) => {
   const Projects = Q.nbind(Project.create, Project)
 
+  req.body.keywords = req.body.keywords.split(', ')
+  .sort(function (a, b) {
+    a = a.toUpperCase()
+    b = b.toUpperCase()
+    if (a < b) { return -1 }
+    if (a > b) { return 1 }
+    return 0
+  })
+  .join(', ')
+
   Projects({
     title: req.body.title,
     about: req.body.about,
