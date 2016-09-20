@@ -10,7 +10,7 @@ class About extends Component {
       <div className='container-fluid'>
         <img src='https://scontent-lax3-1.xx.fbcdn.net/t31.0-8/12698253_1166479130037391_513548301625223610_o.jpg' className='profile-picture pull-left'></img>
         <div className='icon-container'>
-          <a href='https://www.linkedin.com/in/chriskuh'><img src='http://i.imgur.com/ZoRHdaX.png' className='pull-right'></img></a>
+          <a href='https://www.linkedin.com/in/chriskuh'><img src='http://i.imgur.com/gxhkxFy.png' className='pull-right'></img></a>
           <a href='https://github.com/ckuh'><img src='http://i.imgur.com/TpbdipZ.png?1' className='pull-right'></img></a>
         </div>
         <div className='container-fluid about-container'>
