@@ -6,3 +6,17 @@ body {
 .tile-container {
   clear: both;
 }
+
+.profile-picture {
+  width: 30%;
+  border-radius: 100%;
+  margin-right: 15px;
+}
+
+.icon-container img {
+  width: 5%;
+}
+
+.about-container {
+  clear:right;
+}

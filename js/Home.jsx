@@ -7,6 +7,7 @@ import { fetchProjects } from './actions/projectActions'
 // components
 import ProjectTile from './Tile'
 import Search from './Search'
+import About from './About'
 import { Well } from 'react-bootstrap'
 
 class Home extends Component {
@@ -17,6 +18,10 @@ class Home extends Component {
   render () {
     return (
       <div className='container-fluid'>
+        <Well bsSize='large'>
+          <About />
+        </Well>
+
         <Well bsSize='large'>
           <Search />
           <ProjectTile />
