@@ -22,7 +22,10 @@ class Home extends Component {
           <About />
         </Well>
 
-        <Well bsSize='large'>
+        <Well bsSize='large' className='application-container'>
+          <div className='application-title'>
+            <h3>Applications</h3>
+          </div>
           <Search />
           <ProjectTile />
         </Well>
