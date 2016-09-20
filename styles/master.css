@@ -2,3 +2,7 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+
+.tile-container {
+  clear: both;
+}

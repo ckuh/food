@@ -20,7 +20,7 @@ class Search extends Component {
 
   render () {
     return (
-      <div>
+      <div className='pull-right'>
         <input onChange={this.filterProjects} placeholder='search' />
       </div>
     )

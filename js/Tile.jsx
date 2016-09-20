@@ -13,7 +13,7 @@ class ProjectTile extends Component {
   renderProjects () {
     return this.props.projects.filterProjList.map((project, key) => {
       return (
-        <div key={key}>
+        <div className='col-sm-4' key={key}>
           <h1>{project.title}</h1>
           <a href={project.url}>Vist Page</a>
           <p>{project.keywords}</p>
@@ -27,8 +27,10 @@ class ProjectTile extends Component {
     const projects = this.renderProjects()
 
     return (
-      <div>
-        {projects}
+      <div className='container-fluid tile-container'>
+        <div className='row'>
+          {projects}
+        </div>
       </div>
     )
   }
