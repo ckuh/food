@@ -27,6 +27,10 @@ body {
   right: 24px;
 }
 
+.search-container input {
+  text-indent: 5px;
+}
+
 .application-title h3 {
   text-align: center;
   margin-top: 0px;
