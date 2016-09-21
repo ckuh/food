@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+// components
+import { Button } from 'react-bootstrap'
+
 class ProjectTile extends Component {
   constructor (props) {
     super(props)
@@ -12,12 +15,24 @@ class ProjectTile extends Component {
 
   renderProjects () {
     return this.props.projects.filterProjList.map((project, key) => {
+      let button
+
+      if (project.deploy) {
+        button = (
+          <Button href={project.url} bsClass='btn about-button'>View Page</Button>
+        )
+      } else {
+        button = (
+          <Button href={project.url} bsClass='btn about-button'>View on GitHub</Button>
+        )
+      }
+
       return (
         <div className='col-md-6' key={key}>
           <h1>{project.title}</h1>
-          <a href={project.url}>Vist Page</a>
           <p>{project.keywords}</p>
           <p>{project.about}</p>
+          {button}
         </div>
       )
     })
