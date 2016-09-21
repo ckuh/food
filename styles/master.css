@@ -17,8 +17,26 @@ body {
   width: 5%;
 }
 
-.about-container {
-  clear:right;
+.about-container img {
+  float: left
+}
+
+.about-container div {
+  overflow: hidden;
+}
+
+.about-container div h1 span{
+  color: #8E28D1;
+}
+
+.about-button {
+  margin-right: 15px;
+  color: white;
+  background-color: #FFCC17;
+}
+
+.about-button:hover {
+  color: white;
 }
 
 .search-container {
@@ -38,4 +56,16 @@ body {
 
 .application-container {
   position: relative;
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.contact-container h1 {
+  margin: 0px
+}
+
+.contact-container div {
+  padding: 15px;
 }
