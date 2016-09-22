@@ -3,8 +3,23 @@ body {
   padding-bottom: 15px;
 }
 
-.tile-container div div{
-  height: 149px;
+.tile-touple-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tile-touple-container div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 25px;
+  width: 40vh;
+  height: 40vh;
+}
+
+.tile-container div div {
+  /*height: 149px;*/
   text-align: center;
 }
 
@@ -45,6 +60,17 @@ body {
   color: white;
 }
 
+.tile-button {
+  position: absolute;
+  bottom: 25px;
+  color: white;
+  background-color: #FFCC17;
+}
+
+.tile-button:hover {
+  color: white;
+}
+
 .search-container {
   position: absolute;
   top: 24px;
@@ -78,7 +104,7 @@ body {
 
 @media (min-width: 922px) {
   .tile-container div div{
-    height: 149px;
+    /*height: 149px;*/
   }
 }
 
