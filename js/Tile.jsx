@@ -14,10 +14,7 @@ class ProjectTile extends Component {
   }
 
   renderProjects () {
-    let storage = []
-    let tple = []
-
-    this.props.projects.filterProjList.forEach((project, key) => {
+    return this.props.projects.filterProjList.map((project, key) => {
       let button
 
       if (project.deploy) {
@@ -30,28 +27,18 @@ class ProjectTile extends Component {
         )
       }
 
-      tple.push((
-        <div className='' key={key}>
-          <div className='tile-touple-content-container'>
+      return (
+        <div className='tile' key={key}>
+          <div className='tile-content-container'>
             <h1>{project.title}</h1>
             <p>{project.keywords}</p>
             <p>{project.about}</p>
           </div>
+
           {button}
         </div>
-      ))
-
-      if ((key + 1) % 2 === 0) {
-        storage.push((
-          <div className='tile-touple-container'>
-            {tple}
-          </div>
-        ))
-        tple = []
-      }
+      )
     })
-
-    return storage
   }
 
   render () {
@@ -59,9 +46,7 @@ class ProjectTile extends Component {
 
     return (
       <div className='container-fluid tile-container'>
-        <div className=''>
-          {projects}
-        </div>
+        {projects}
       </div>
     )
   }

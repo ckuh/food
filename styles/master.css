@@ -3,29 +3,28 @@ body {
   padding-bottom: 15px;
 }
 
-.tile-touple-container {
-  display: flex;
-  justify-content: center;
-}
-
-.tile-touple-container div {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 25px;
-  width: 40vh;
-  height: 40vh;
-}
-
-.tile-container div div {
-  /*height: 149px;*/
+.tile {
   text-align: center;
+  position: relative;
+  max-width: 345px;
+  margin: 0 auto 65px;
 }
 
-.tile-container div div h1{
-  margin-top: 0px;
-  margin-bottom: 0px;
+.tile-container div:first-child {
+  margin-top: 45px;
+}
+
+.tile-container div:last-child {
+  margin-bottom: 45px;
+}
+
+.tile-button {
+  color: white;
+  background-color: #FFCC17;
+}
+
+.tile-button:hover {
+  color: white;
 }
 
 .profile-picture {
@@ -60,17 +59,6 @@ body {
   color: white;
 }
 
-.tile-button {
-  position: absolute;
-  bottom: 25px;
-  color: white;
-  background-color: #FFCC17;
-}
-
-.tile-button:hover {
-  color: white;
-}
-
 .search-container {
   position: absolute;
   top: 24px;
@@ -102,9 +90,23 @@ body {
   padding: 15px;
 }
 
-@media (min-width: 922px) {
-  .tile-container div div{
-    /*height: 149px;*/
+@media (min-width: 768px) {
+  .tile {
+    float: left;
+    display: block;
+    margin-right: 5%;
+    width: 47.5%;
+    max-width: initial;
+  }
+
+  .tile-container div:first-child {
+    margin-top: 0px;
+  }
+
+  .tile-container div:last-child,
+  .tile-container div:nth-child(2n){
+    margin-right: 0px;
+    margin-bottom: 90px;
   }
 }
 
