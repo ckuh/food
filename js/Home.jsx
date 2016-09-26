@@ -20,17 +20,18 @@ class Home extends Component {
   render () {
     return (
       <div className='container-fluid'>
-        <Well bsSize='large'>
+        <div className='about-container'>
           <About />
-        </Well>
+        </div>
 
-        <Well bsSize='large' className='application-container'>
+        <div className='application-container'>
           <div className='application-title'>
             <h3>Applications</h3>
           </div>
           <Search />
           <ProjectTile />
-        </Well>
+        </div>
+
         <Well bsSize='large'>
           <Contact />
         </Well>

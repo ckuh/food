@@ -4,7 +4,7 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 
 const About = () => (
-  <div className='container-fluid about-container'>
+  <div className='container-fluid about-content-container'>
     <img src='https://scontent-lax3-1.xx.fbcdn.net/t31.0-8/12698253_1166479130037391_513548301625223610_o.jpg' className='profile-picture' />
 
     <div className='container-fluid'>
