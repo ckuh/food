@@ -25,9 +25,10 @@ body {
 }
 
 .tile-content-container {
+  width: 100%;
   position: absolute;
   padding: 25px;
-  top: 45px;
+  top: 15%;
   z-index: -1;
 }
 
