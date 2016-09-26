@@ -20,9 +20,11 @@ class Home extends Component {
   render () {
     return (
       <div className='container-fluid'>
-        <div className='about-container'>
-          <About />
-        </div>
+        <Well bsSize='large'>
+          <div className='about-container'>
+            <About />
+          </div>
+        </Well>
 
         <div className='application-container'>
           <Well bsSize='large'>

@@ -132,6 +132,10 @@ body {
   .tile-container div:nth-child(2n){
     margin-right: 0px;
   }
+
+  .tile-container div:first-child{
+    margin-top: 0px;
+  }
 }
 
 @media (min-width: 1028px) {
