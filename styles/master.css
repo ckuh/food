@@ -6,6 +6,7 @@ body {
 .tile {
   text-align: center;
   position: relative;
+  z-index: 1;
   max-width: 345px;
   margin: 0 auto;
 }
@@ -30,6 +31,10 @@ body {
   padding: 25px;
   top: 15%;
   z-index: -1;
+}
+
+.tile-container div:first-child{
+  margin-top: 25px;
 }
 
 .tile-button {
@@ -91,13 +96,12 @@ body {
   text-indent: 5px;
 }
 
-.application-title h3 {
+.application-title h1 {
   text-align: center;
   margin-top: 0px;
 }
 
 .application-container {
-  padding: 25px;
   position: relative;
 }
 
@@ -115,6 +119,8 @@ body {
 
 @media (min-width: 768px) {
   .tile {
+    position: relative;
+    z-index: 1;
     float: left;
     display: block;
     margin-right: 5%;

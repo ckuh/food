@@ -25,11 +25,13 @@ class Home extends Component {
         </div>
 
         <div className='application-container'>
-          <div className='application-title'>
-            <h3>Applications</h3>
-          </div>
-          <Search />
-          <ProjectTile />
+          <Well bsSize='large'>
+            <div className='application-title'>
+              <h1>Applications</h1>
+            </div>
+            <Search />
+            <ProjectTile />
+          </Well>
         </div>
 
         <Well bsSize='large'>
