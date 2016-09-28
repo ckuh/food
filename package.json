@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "standard",
-    "start": "npm run build | npm run server",
-    "server": "node server/server.js",
+    "start": "node server/server.js",
     "build": "webpack"
   },
   "repository": {
