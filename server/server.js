@@ -15,6 +15,7 @@ app.use(bodyParse.json())
 
 // routes
 app.use('/projects', routes.projects)
+app.use('/resume', routes.resume)
 
 app.use('/public', express.static('./public'))
 

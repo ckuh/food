@@ -8,7 +8,7 @@ import { fetchProjects } from './actions/projectActions'
 import ProjectTile from './Tile'
 import Search from './Search'
 import About from './About'
-import Contact from './Contact'
+// import Contact from './Contact'
 
 import { Well } from 'react-bootstrap'
 
@@ -36,9 +36,9 @@ class Home extends Component {
           </Well>
         </div>
 
-        <Well bsSize='large'>
+        {/* <Well bsSize='large'>
           <Contact />
-        </Well>
+        </Well> */}
       </div>
     )
   }

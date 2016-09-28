@@ -16,6 +16,7 @@ const About = () => (
       <div>
         <Button href='https://github.com/ckuh' bsClass='btn about-button'>Github</Button>
         <Button href='https://www.linkedin.com/in/chriskuh' bsClass='btn about-button'>Linkedin</Button>
+        <Button href='/resume' bsClass='btn about-button'>Resume</Button>
       </div>
     </div>
   </div>

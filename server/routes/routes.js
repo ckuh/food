@@ -1,5 +1,7 @@
-var projects = require('./projects.js')
+const projects = require('./projects')
+const resume = require('./resume')
 
 exports.routes = {
-  projects: projects
+  projects: projects,
+  resume: resume
 }
