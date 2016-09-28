@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "standard",
-    "start": "nodemon server/server.js",
+    "start": "'npm run build' 'npm run server'",
+    "server": "node server/server.js",
     "build": "webpack",
-    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
