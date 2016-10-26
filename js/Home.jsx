@@ -28,9 +28,6 @@ class Home extends Component {
 
         <div className='application-container'>
           <Well bsSize='large'>
-            <div className='application-title'>
-              <h1>Applications</h1>
-            </div>
             <Search />
             <ProjectTile />
           </Well>

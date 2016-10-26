@@ -5,32 +5,29 @@ body {
 
 .tile {
   text-align: center;
-  position: relative;
-  z-index: 1;
-  max-width: 345px;
+  min-width: 345px;
   margin: 0 auto;
 }
 
 .tile img {
   border: 2px solid #ccc;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   width: 100%;
 }
 
-.tile img:hover {
+/*.tile img:hover {
   opacity: 0;
-}
+}*/
 
 .tile h1 {
   margin-top: 0px;
 }
 
 .tile-content-container {
-  width: 100%;
-  position: absolute;
+  width: 80%;
   padding: 25px;
   top: 15%;
-  z-index: -1;
+  margin: 0 auto;
 }
 
 .tile-container div:first-child{
@@ -43,11 +40,11 @@ body {
 }
 
 .tile-button:hover {
-  color: white;
+  color: white !important;
 }
 
 .tile-button:focus {
-  color: white;
+  color: white !important;
 }
 
 .profile-picture {
@@ -119,22 +116,11 @@ body {
 
 @media (min-width: 768px) {
   .tile {
-    position: relative;
-    z-index: 1;
-    float: left;
-    display: block;
-    margin-right: 5%;
-    width: 47.5%;
-    max-width: initial;
-  }
-
-  .tile-container div:last-child,
-  .tile-container div:nth-child(2n){
-    margin-right: 0px;
+    width: 70%;
   }
 
   .tile-container div:first-child{
-    margin-top: 0px;
+    margin-top: 25px;
   }
 }
 

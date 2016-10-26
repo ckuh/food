@@ -60,8 +60,6 @@
 
 	__webpack_require__(544);
 
-	__webpack_require__(553);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_reactDom2.default.render(_react2.default.createElement(_ClientApp2.default, null), document.getElementById('app'));
@@ -23665,15 +23663,6 @@
 	          _react2.default.createElement(
 	            _reactBootstrap.Well,
 	            { bsSize: 'large' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'application-title' },
-	              _react2.default.createElement(
-	                'h1',
-	                null,
-	                'Applications'
-	              )
-	            ),
 	            _react2.default.createElement(_Search2.default, null),
 	            _react2.default.createElement(_Tile2.default, null)
 	          )
@@ -25033,6 +25022,8 @@
 
 	var _reactRedux = __webpack_require__(194);
 
+	var _reactBootstrap = __webpack_require__(231);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25040,6 +25031,9 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// component
+
 
 	var ProjectTile = function (_Component) {
 	  _inherits(ProjectTile, _Component);
@@ -25059,19 +25053,47 @@
 	    key: 'renderProjects',
 	    value: function renderProjects() {
 	      return this.props.projects.filterProjList.map(function (project, key) {
-	        return _react2.default.createElement(
+	        return project.deploy ? _react2.default.createElement(
 	          'div',
 	          { className: 'tile', key: key },
 	          _react2.default.createElement(
-	            'h1',
+	            'h2',
 	            null,
 	            project.title
 	          ),
+	          _react2.default.createElement('img', { src: project.img }),
 	          _react2.default.createElement(
-	            'a',
-	            { href: project.url },
-	            _react2.default.createElement('img', { src: project.img })
+	            'div',
+	            { className: 'tile-content-container' },
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              _react2.default.createElement(
+	                'i',
+	                null,
+	                project.keywords
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              project.about
+	            ),
+	            _react2.default.createElement(
+	              _reactBootstrap.Button,
+	              { href: project.url, bsClass: 'btn tile-button' },
+	              'VIEW SITE'
+	            )
+	          )
+	        ) : _react2.default.createElement(
+	          'div',
+	          { className: 'tile', key: key },
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            project.title
 	          ),
+	          _react2.default.createElement('img', { src: project.img }),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'tile-content-container' },
@@ -25084,6 +25106,11 @@
 	              'p',
 	              null,
 	              project.about
+	            ),
+	            _react2.default.createElement(
+	              _reactBootstrap.Button,
+	              { href: project.url, bsClass: 'btn tile-button' },
+	              'VIEW GITHUB'
 	            )
 	          )
 	        );
@@ -50283,46 +50310,6 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
-
-
-/***/ },
-/* 553 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(554);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(552)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./master.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./master.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 554 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(546)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "body {\n  padding-top: 15px;\n  padding-bottom: 15px;\n}\n\n.tile {\n  text-align: center;\n  position: relative;\n  z-index: 1;\n  max-width: 345px;\n  margin: 0 auto;\n}\n\n.tile img {\n  border: 2px solid #ccc;\n  margin-bottom: 25px;\n  width: 100%;\n}\n\n.tile img:hover {\n  opacity: 0;\n}\n\n.tile h1 {\n  margin-top: 0px;\n}\n\n.tile-content-container {\n  width: 100%;\n  position: absolute;\n  padding: 25px;\n  top: 15%;\n  z-index: -1;\n}\n\n.tile-container div:first-child{\n  margin-top: 25px;\n}\n\n.tile-button {\n  color: white;\n  background-color: #FFCC17;\n}\n\n.tile-button:hover {\n  color: white;\n}\n\n.tile-button:focus {\n  color: white;\n}\n\n.profile-picture {\n  width: 30%;\n  border-radius: 100%;\n  margin-right: 15px;\n}\n\n.icon-container img {\n  width: 5%;\n}\n\n.about-container {\n  padding: 25px;\n}\n\n.about-content-container img {\n  float: left\n}\n\n.about-content-container div {\n  overflow: hidden;\n}\n\n.about-content-container div h1 span{\n  color: #8E28D1;\n}\n\n.about-button {\n  margin-right: 15px;\n  color: white;\n  background-color: #FFCC17;\n}\n\n.about-button:hover {\n  color: white;\n}\n\n.search-container {\n  position: absolute;\n  top: 24px;\n  right: 24px;\n}\n\n.search-container input {\n  text-indent: 5px;\n}\n\n.application-title h1 {\n  text-align: center;\n  margin-top: 0px;\n}\n\n.application-container {\n  position: relative;\n}\n\n.contact-container {\n  text-align: center;\n}\n\n.contact-container h1 {\n  margin: 0px\n}\n\n.contact-container div {\n  padding: 15px;\n}\n\n@media (min-width: 768px) {\n  .tile {\n    position: relative;\n    z-index: 1;\n    float: left;\n    display: block;\n    margin-right: 5%;\n    width: 47.5%;\n    max-width: initial;\n  }\n\n  .tile-container div:last-child,\n  .tile-container div:nth-child(2n){\n    margin-right: 0px;\n  }\n\n  .tile-container div:first-child{\n    margin-top: 0px;\n  }\n}\n\n@media (min-width: 1028px) {\n  .profile-picture {\n    width: 270px;\n  }\n}\n", ""]);
-
-	// exports
 
 
 /***/ }
