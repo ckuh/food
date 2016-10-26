@@ -15,10 +15,6 @@ body {
   width: 100%;
 }
 
-/*.tile img:hover {
-  opacity: 0;
-}*/
-
 .tile h1 {
   margin-top: 0px;
 }
@@ -50,23 +46,24 @@ body {
 .profile-picture {
   width: 30%;
   border-radius: 100%;
-  margin-right: 15px;
 }
 
 .icon-container img {
   width: 5%;
 }
 
+hr {
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
+  width: 50%;
+  border: 1px solid #D3D3D3 !important;
+}
+
 .about-container {
-  padding: 25px;
-}
-
-.about-content-container img {
-  float: left
-}
-
-.about-content-container div {
-  overflow: hidden;
+  padding: 15px;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about-content-container div h1 span{
@@ -125,11 +122,5 @@ body {
 
   .tile-container div:first-child{
     margin-top: 25px;
-  }
-}
-
-@media (min-width: 1028px) {
-  .profile-picture {
-    width: 270px;
   }
 }

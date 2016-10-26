@@ -23603,10 +23603,6 @@
 
 	var _Tile2 = _interopRequireDefault(_Tile);
 
-	var _Search = __webpack_require__(228);
-
-	var _Search2 = _interopRequireDefault(_Search);
-
 	var _About = __webpack_require__(230);
 
 	var _About2 = _interopRequireDefault(_About);
@@ -23625,6 +23621,8 @@
 
 
 	// components
+
+	// import Search from './Search'
 
 	// import Contact from './Contact'
 
@@ -23655,15 +23653,11 @@
 	            'div',
 	            { className: 'about-container' },
 	            _react2.default.createElement(_About2.default, null)
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'application-container' },
+	          ),
+	          _react2.default.createElement('hr', null),
 	          _react2.default.createElement(
-	            _reactBootstrap.Well,
-	            { bsSize: 'large' },
-	            _react2.default.createElement(_Search2.default, null),
+	            'div',
+	            { className: 'application-container' },
 	            _react2.default.createElement(_Tile2.default, null)
 	          )
 	        )
@@ -25148,107 +25142,8 @@
 	module.exports = (0, _reactRedux.connect)(mapStateToProps)(ProjectTile);
 
 /***/ },
-/* 228 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRedux = __webpack_require__(194);
-
-	var _searchActions = __webpack_require__(229);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	// actions
-
-
-	var Search = function (_Component) {
-	  _inherits(Search, _Component);
-
-	  function Search(props) {
-	    _classCallCheck(this, Search);
-
-	    var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this, props));
-
-	    _this.filterProjects = _this.filterProjects.bind(_this);
-	    return _this;
-	  }
-
-	  _createClass(Search, [{
-	    key: 'filterProjects',
-	    value: function filterProjects(event) {
-	      var filter = this.props.projects.projList.filter(function (project) {
-	        return project.title.toUpperCase().indexOf(event.target.value.toUpperCase()) >= 0;
-	      });
-	      this.props.filterProjects(filter);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'search-container' },
-	        _react2.default.createElement('input', { onChange: this.filterProjects, placeholder: 'search' })
-	      );
-	    }
-	  }]);
-
-	  return Search;
-	}(_react.Component);
-
-	var mapStateToProps = function mapStateToProps(state) {
-	  return {
-	    projects: state.projects
-	  };
-	};
-
-	var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-	  return {
-	    filterProjects: (0, _searchActions.filterProjects)(dispatch)
-	  };
-	};
-
-	var _React$PropTypes = _react2.default.PropTypes;
-	var object = _React$PropTypes.object;
-	var func = _React$PropTypes.func;
-
-
-	Search.propTypes = {
-	  projects: object,
-	  filterProjects: func
-	};
-
-	module.exports = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Search);
-
-/***/ },
-/* 229 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.filterProjects = filterProjects;
-	function filterProjects(dispatch) {
-	  return function (params) {
-	    dispatch({ type: 'SET_PROJECTS', payload: params });
-	  };
-	}
-
-/***/ },
+/* 228 */,
+/* 229 */,
 /* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -25265,15 +25160,15 @@
 	var About = function About() {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'container-fluid about-content-container' },
+	    { className: 'about-content-container' },
 	    _react2.default.createElement('img', { src: 'https://scontent-lax3-1.xx.fbcdn.net/t31.0-8/12698253_1166479130037391_513548301625223610_o.jpg', className: 'profile-picture' }),
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'container-fluid' },
+	      { className: '' },
 	      _react2.default.createElement(
 	        'h3',
 	        null,
-	        'Hey there,'
+	        'Hey there!'
 	      ),
 	      _react2.default.createElement(
 	        'h1',

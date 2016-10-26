@@ -6,7 +6,7 @@ import { fetchProjects } from './actions/projectActions'
 
 // components
 import ProjectTile from './Tile'
-import Search from './Search'
+// import Search from './Search'
 import About from './About'
 // import Contact from './Contact'
 
@@ -24,14 +24,12 @@ class Home extends Component {
           <div className='about-container'>
             <About />
           </div>
-        </Well>
-
-        <div className='application-container'>
-          <Well bsSize='large'>
-            <Search />
+          <hr />
+          <div className='application-container'>
+            {/* <Search /> */}
             <ProjectTile />
-          </Well>
-        </div>
+          </div>
+        </Well>
 
         {/* <Well bsSize='large'>
           <Contact />
