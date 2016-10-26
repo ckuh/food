@@ -80,7 +80,11 @@ body {
 }
 
 .about-button:hover {
-  color: white;
+  color: white !important;
+}
+
+.about-button:focus {
+  color: white !important;
 }
 
 .search-container {
